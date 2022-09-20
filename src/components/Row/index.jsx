@@ -24,9 +24,14 @@ const Row = ({ title, fetchURL, rowID }) => {
           id={'slider' + rowID}
           className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
         >
-          {movies.map((item, id) => (
-            <Movie key={id} item={item} />
-          ))}
+          <div
+            id={'slider' + rowID}
+            className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
+          >
+            {movies.map((item, id) => (
+              <Movie key={id} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </>
